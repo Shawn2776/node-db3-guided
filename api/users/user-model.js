@@ -34,6 +34,7 @@ async function find() {
   .groupBy("u.id")
   .select("u.id as user_id","u.username")
   .count("p.id as post_count")
+  return rows
   /*
     Improve so it resolves this structure:
 
