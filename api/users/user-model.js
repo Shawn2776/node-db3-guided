@@ -54,7 +54,7 @@ async function find() {
   */
 }
 
-function findById(id) {
+async function findById(id) {
   return db('users').where({ id }).first()
   /*
     Improve so it resolves this structure:
