@@ -55,7 +55,9 @@ async function find() {
 }
 
 async function findById(id) {
-  return db('users').where({ id }).first()
+  const rows = await db("users as u")
+  .leftJoin("posts as p","u.id","p.user_id")
+  
   /*
     Improve so it resolves this structure:
 
