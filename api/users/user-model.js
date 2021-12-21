@@ -8,7 +8,12 @@ module.exports = {
   remove
 }
 
-function findPosts(user_id) {
+async function findPosts(user_id) {
+  const rows = await db("posts as p")
+  .join("users as u","u.id","p.user_id")
+  .select("p.id as post_id","u.username","p.contents")
+  .where({user_id})
+  return rows
   /*
     Implement so it resolves this structure:
 
