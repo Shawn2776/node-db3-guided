@@ -64,6 +64,7 @@ async function findById(id) {
     "p.contents"
   )
   .where("u.id",id)
+  return rows
   /*
     Improve so it resolves this structure:
 
