@@ -79,6 +79,7 @@ async function findById(id) {
       })
     }
   }
+  return result
 
   /*
     Improve so it resolves this structure:
