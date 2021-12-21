@@ -72,7 +72,12 @@ async function findById(id) {
       result.user_id = record.user_id
       result.username = record.username
     }
-    
+    if(record.post_id){
+      result.posts.push({
+        contents:record.contents,
+        post_id:record.post_id
+      })
+    }
   }
 
   /*
