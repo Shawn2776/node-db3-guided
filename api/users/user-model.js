@@ -28,8 +28,8 @@ async function findPosts(user_id) {
   */
 }
 
-function find() {
-  return db('users')
+async function find() {
+  
   /*
     Improve so it resolves this structure:
 
