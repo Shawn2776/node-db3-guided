@@ -67,6 +67,14 @@ async function findById(id) {
   
   let result = { posts:[]}
 
+  for(let record of rows){
+    if(!result.username){
+      result.user_id = record.user_id
+      result.username = record.username
+    }
+    
+  }
+
   /*
     Improve so it resolves this structure:
 
