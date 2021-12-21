@@ -64,7 +64,9 @@ async function findById(id) {
     "p.contents"
   )
   .where("u.id",id)
-  return rows
+  
+  let result = { posts:[]}
+
   /*
     Improve so it resolves this structure:
 
